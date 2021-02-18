@@ -13,19 +13,19 @@ root: /
 permalink: post/:title.html
 
 # seo优化各个浏览器的验证信息
-beian: 沪ICP备8888888号-1
-seo_title: 暖风吹过的季节 # 子页面的后缀，效果： 关于我 | 暖风吹过的季节，如果与title一致，则可以不设置
-seo:
-  google_site_verification: 19ixTFj-X-rXuvZFvR1PMkqSHMXZ5GjN7nhYdYYFm-c
-  baidu_site_verification: p7Pz3jlx4t
-  ms_site_verification: 7E2AEE3378AC93764DEAB411177A21A1
-  _360_site_verification: 5c7e8a1fdbf35ed6003c48733208f705 # 不能以数字开头，所以加上了下划线
+# beian: 沪ICP备8888888号-1
+# seo_title: 暖风吹过的季节 # 子页面的后缀，效果： 关于我 | 暖风吹过的季节，如果与title一致，则可以不设置
+# seo:
+#   google_site_verification: 19ixTFj-X-rXuvZFvR1PMkqSHMXZ5GjN7nhYdYYFm-c
+#   baidu_site_verification: p7Pz3jlx4t
+#   ms_site_verification: 7E2AEE3378AC93764DEAB411177A21A1
+#   _360_site_verification: 5c7e8a1fdbf35ed6003c48733208f705 # 不能以数字开头，所以加上了下划线
 
 # 开启博客资源的相对链接 https://hexo.io/zh-cn/docs/asset-folders
 post_asset_folder: true
 
 # Site settings
-header_icon: img/icon.png
+header_icon: img/me.jpg
 
 theme: geektutu
 
@@ -46,26 +46,25 @@ gitalk:
 # alipay wechatpay 的二维码转换的网址，不使用二维码图片，提高加载速率。
 # https://cli.im/deqr 可将二维码转为网址
 reward:
-  alipay: HTTPS://QR.ALIPAY.COM/FKX060337TUXBAX9LIFJE8
-  wechat: wxp://f2f0qgGBlfD1nZXjvBjievxB0z0fc0W2sBq5
+  alipay: HTTPS://QR.ALIPAY.COM/FKX02180XMSSO9EQJWCFD6
+  wechat: wxp://f2f0PH_fQkGZDpDteT6nG-zZ_9Ke54op-6fE
 
+#相关链接
 related_links:
-- link: https://github.com/geektutu/hexo-theme-geektutu
+- link: https://github.com/hellnxue
   img: img/related_links/github.png
-- link: https://github.com/geekcircle
-  img: img/related_links/geekcircle.png
-- link: mailto:Geektutu<gzdaijie@gmail.com>?subject=From Geektutu's Blog
-  img: img/related_links/email.png
+- link: https://juejin.cn/user/2225067266412605
+  img: img/related_links/juejin.svg
 
 # 文章末尾配置一些提示信息，可选，不配置则不显示
 post_tips:
-  find_me: true # 本站永久域名「 xx.domain 」， 也可以通过搜索「 xx 」找到我。
+  find_me: false # 本站永久域名「 xx.domain 」， 也可以通过搜索「 xx 」找到我。
   zhihu_zhuanlan: https://zhuanlan.zhihu.com/geektutu # 欢迎关注我的「 知乎专栏 」，所有文章可在「 知乎APP 」查看。
 
 widgets:
   mobile_qrcode: false # 开启移动端二维码，扫一扫，手机上阅读
-  caidan: true  # 开启彩蛋，点击屏幕会随机弹出 '点个赞','留个言'等
-  busuanzi: true # 开启不蒜子统计 https://busuanzi.ibruce.info/
+  caidan: false  # 开启彩蛋，点击屏幕会随机弹出 '点个赞','留个言'等
+  busuanzi: false # 开启不蒜子统计 https://busuanzi.ibruce.info/
 
 ba_auto_push: true # Baidu 自动推送，以下均为可选配置
 ba_track_id: 1a0ec33b1aa # Baidu Analytics

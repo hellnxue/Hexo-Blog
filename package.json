@@ -8,7 +8,7 @@
   "scripts": {
     "update": "git clone https://github.com/geektutu/hexo-theme-geektutu.git themes/geektutu",
     "build": "hexo clean && hexo generate",
-    "start": "hexo server --draft -p 4002",
+    "start": "hexo server --draft -p 4003",
     "deploy": "hexo deploy"
   },
   "dependencies": {

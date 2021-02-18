@@ -1,5 +1,6 @@
 ---
 title: Hello World
+date: 2021-02-18 11:51:24
 nav:
 - TensorFlow
 categories:
@@ -40,3 +41,8 @@ $ hexo deploy
 ```
 
 More info: [Deployment](https://hexo.io/docs/one-command-deployment.html)
+
+
+## Quick Start2
+
+### some other info......

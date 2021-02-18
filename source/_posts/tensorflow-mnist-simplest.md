@@ -13,7 +13,7 @@ categories:
 - TensorFlow教程
 top: 1
 github: https://github.com/geektutu/tensorflow-tutorial-samples
-image: post/tensorflow-mnist-simplest/xxx.jpg
+image: img/bg.jpg
 ---
 
 这篇文章是整个 TensorFlow入门-mnist手写数字识别系列的第一篇，主要介绍了如何从0开始用tensorflow搭建最简单的网络进行训练。
