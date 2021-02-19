@@ -1,16 +1,17 @@
 ---
-title: TensorFlow入门(一) - mnist手写数字识别(网络搭建)
-date: 2017-12-09 11:51:24
+title: 文章测试
+date: 2021-02-09 10:51:24
 description: TensorFlow 入门系列文章，mnist手写数字识别(网络搭建)。
 tags:
-- 机器学习
-- tensorflow
-- mnist
-- Python
+- 前端学习
+- Vue
+- 微信小程序
+- JavaScript
+- Node
 nav:
-- Banana
+- Apple
 categories:
-- TensorFlow教程
+- 前端学习
 top: 1
 github: https://github.com/geektutu/tensorflow-tutorial-samples
 image: img/bg.jpg
