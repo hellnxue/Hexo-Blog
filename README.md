@@ -1,2 +1,1 @@
-# Hexo-Blog
-我的Hexo博客
+# xiaowan.github.io

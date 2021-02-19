@@ -8,7 +8,7 @@ tags:
 - mnist
 - Python
 nav:
-- TensorFlow
+- Banana
 categories:
 - TensorFlow教程
 top: 1

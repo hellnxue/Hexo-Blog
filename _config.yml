@@ -33,8 +33,8 @@ theme: geektutu
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: https://git.coding.net/gzdaijie/geektutu-blog.git
-  branch: coding-pages
+  repository: https://github.com/hellnxue/hellnxue.github.io.git
+  branch: gh-pages
 
 gitalk:
   client_id: 'c1fdd456a4caae5f7df0'
