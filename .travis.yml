@@ -1,18 +1,21 @@
 sudo: false
 language: node_js
 node_js:
-  - 10 # use nodejs v10 LTS
+  - 12 # use nodejs v12 LTS
 cache: npm
 branches:
   only:
-    - master # build master branch only
+    - blog-source # 仅从 blog-source 分支构建
 script:
+  - hexo clean # 清除缓存文件 (db.json) 和已生成的静态文件 (public)
   - hexo generate # generate static files
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GH_TOKEN
+  github-token: $GH_TOKEN # Personal access tokens
   keep-history: true
+  committer_from_gh: true
+  target_branch: gh-pages # 部署到 gh-pages 分支
   on:
-    branch: master
+    branch: blog-source # 存放博客源码的分支
   local-dir: public
