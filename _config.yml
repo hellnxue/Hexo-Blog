@@ -8,9 +8,9 @@ description: 暖风吹过的季节的小站，致力于分享一些技术教程�
 author: 暖风吹过的季节
 language: zh-CN
 
-url: https://geektutu.com
+url: https://hellnxue.github.io
 root: /
-permalink: post/:title.html
+permalink: post/:year/:title.html
 
 # seo优化各个浏览器的验证信息
 # beian: 沪ICP备8888888号-1
@@ -58,7 +58,7 @@ related_links:
 
 # 文章末尾配置一些提示信息，可选，不配置则不显示
 post_tips:
-  find_me: false # 本站永久域名「 xx.domain 」， 也可以通过搜索「 xx 」找到我。
+  find_me: true # 本站永久域名「 xx.domain 」， 也可以通过搜索「 xx 」找到我。
   zhihu_zhuanlan: https://zhuanlan.zhihu.com/geektutu # 欢迎关注我的「 知乎专栏 」，所有文章可在「 知乎APP 」查看。
 
 widgets:
