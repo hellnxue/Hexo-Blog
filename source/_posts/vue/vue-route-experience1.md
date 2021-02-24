@@ -161,3 +161,7 @@ router.beforeEach((to, from, next) => {
 ```
 ## 总结 
 主要通过在全局导航处判断VUEX中的数据是否存在，判断页面是否刷新，是的话重新走一遍权限路由匹配的方法。
+
+## 结尾小彩蛋
+第一次遇到这个问题，比较懵缺......一时找不到原因，后来通过查找，看到一篇文章，里面的情况跟我遇到的差不多，在此贴上链接，感谢这位网友的分享 ^3^
+{% link 参考文章链接--前往 https://blog.csdn.net/qq_31906983/article/details/88942965?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-8.add_param_isCf&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-8.add_param_isCf   %}
