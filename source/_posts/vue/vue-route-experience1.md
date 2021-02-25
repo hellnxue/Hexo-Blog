@@ -46,6 +46,7 @@ VUEX store中存储的数据会在页面刷新时清空。
 
 ### 实现代码 route/index.js的导航守卫中添加逻辑判断
 
+#### ---------router.js-------------
 ```javascript
 const constantRoutes = [
     {
