@@ -29,15 +29,22 @@ image: img/xhcat/cat4.jpg
 ### 前端菜单定义
 {% asset_img menu.png menu image %}
 
-
-## 问题
-登录后，通过调用vuex中的方法，完成获取权限code，动态筛选权限路由页面操作，然后通过router.addRoute()将有权限菜单添加到路由中，进入动态添加的路由页面，刷新页面出现404
-
-
 ### vuex中的方法
 {% asset_img vuex.png menu image %}
+{% asset_img addRoute.png menu image %}
 
-### router/index.js
+
+## 出现的问题
+登录后，通过调用vuex中的方法，完成获取权限code，动态筛选权限路由页面操作，然后通过router.addRoute()将有权限菜单添加到路由中，进入动态添加的路由页面，刷新页面出现404
+ 
+## 原因分析
+页面刷新时，路由重新初始化，动态添加的路由此时已不存在，只有一些固定路由（比如登录页面）还在，所以出现了404的情况
+
+## 解决方案
+VUEX store中存储的数据会在页面刷新时清空。
+在路由的全局导航router.beforeEach处做个判断，根据VUEX中存放的list是否有值来判断页面是否是刷新，如果不为0，则是第一次登陆，登录后会走匹配路由的方法，不会有问题;如果list.length为0，就为刷新页面，需要重新执行路由匹配，重新添加动态路由即可。
+
+### 实现代码 route/index.js的导航守卫中添加逻辑判断
 
 ```javascript
 const constantRoutes = [
@@ -65,10 +72,7 @@ const constantRoutes = [
                 path: '/index',
                 name: 'index',
                 component: () => import('@/views/home')
-            },
-            ...goods, //商品菜单详情等非列表路由
-            ...order //订单菜单详情等非列表路由
-            // ...permissionManagement
+            }
         ]
     },
     {
@@ -76,6 +80,7 @@ const constantRoutes = [
         component: () => import('@/views/error/404')
     }
 ]
+
 Vue.use(VueRouter)
 const createRouter = () =>
     new VueRouter({
@@ -86,39 +91,6 @@ export function resetRouter() {
     router.matcher = newRouter.matcher // reset router
 }
 const router = createRouter()
-
-// 进度条
-router.beforeEach((to, from, next) => {
-    NProgress.start()
-    const accessToken = localStorage.getItem('accessToken')
-    if (_.isEmpty(accessToken)) {
-        next({
-            path: '/login',
-            query: {
-                redirect: to.fullPath
-            }
-        })
-    } else {
-        if (to.path === '/login') {
-            next({ path: '/index' })
-        } else {
-            next()
-        }
-    }
-    NProgress.done()
-})
-```
-
-## 原因分析
-页面刷新时，路由重新初始化，动态添加的路由此时已不存在，只有一些固定路由（比如登录页面）还在，所以出现了404的情况
-
-## 解决方案
-VUEX store中存储的数据会在页面刷新时清空掉。
-在路由的全局导航router.beforeEach处做个判断，根据VUEX中存放的list是否有值来判断页面是否是刷新，如果不为0，则是第一次登陆，登录后会走匹配路由的方法，不会有问题;如果list.length为0，就为刷新页面，需要重新执行路由匹配，重新添加动态路由即可。
-
-### 实现代码 route/index.js的导航守卫中添加逻辑判断
-
-```javascript
  
 //页面刷新后重新设置权限页面动态路由，防止出现动态路由404问题
 const reSetPermissionList = to => {
